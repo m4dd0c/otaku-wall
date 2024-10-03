@@ -9,7 +9,7 @@ export default function Layout() {
           headerShown: false,
         }}
       >
-        {/* <Stack.Screen name="(nobottombar)/accountinfo" options={{ headerShown: true, headerTitle: "Account info", headerBackTitle: "Go Back" }} /> */}
+        {/* maybe smth */}
       </Stack>
     </GestureHandlerRootView>
   );
