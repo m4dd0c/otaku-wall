@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default function () {
+const SuggestedTab = () => {
   return (
     <View>
-      <Text>ForYou</Text>
+      <Text>SuggestedTab</Text>
     </View>
   );
-}
+};
+
+export default SuggestedTab;
