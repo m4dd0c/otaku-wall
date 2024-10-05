@@ -16,8 +16,11 @@ export default function () {
           {/* theme selection */}
           <Text className="font-semibold text-xl py-2">Theme</Text>
           <View className="flex flex-row justify-evenly items-center gap-3">
-            {modes.map((mode) => (
-              <View className="border border-gray-500 w-1/3 rounded-lg">
+            {modes.map((mode, idx) => (
+              <View
+                className="border border-gray-500 w-1/3 rounded-lg"
+                key={idx}
+              >
                 <TouchableOpacity onPress={() => console.log("c")}>
                   <Text className="text-center py-3 font-semibold text-lg">
                     {mode}
