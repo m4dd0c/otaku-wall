@@ -2,10 +2,9 @@ import axios, { AxiosError } from "axios";
 
 export const server =
   process.env.EXPO_PUBLIC_API_URL || "git://api.nekosapi/com";
-console.log({ server });
 
 export const instance = axios.create({
-  baseURL: `${server}/v3`,
+  baseURL: `${server}/v3/images`,
 });
 
 instance.interceptors.response.use(
