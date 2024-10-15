@@ -14,7 +14,6 @@ const ImageCard = ({ src, size = 'md' }: { src: string, size?: "lg" | "md" | "sm
   return (
     <View>
       <Carousel
-
         renderItem={cor}
         sliderWidth={30}
         itemWidth={80}
