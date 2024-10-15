@@ -1,25 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { Dimensions, Image, View, TouchableWithoutFeedback } from 'react-native';
+import { LinearGradient } from "expo-linear-gradient";
+import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
-import { Image, View } from 'react-native';
-import Carousel from 'react-native-snap-carousel';
+export const ImageCard = ({ src }: { src: string }) => {
+  const { width } = Dimensions.get("window");
+  const handler = () => {
+    console.log("Hello world");
+  }
 
-const cor = () => {
-
+  console.log(src);
   return <View>
-    <Image source={{ uri: "https://cdn-images-1.medium.com/v2/resize:fit:800/1*BWpx3uRPlWByahoXA6M-BQ.jpeg" }} alt="img" />
+    <Image
+      source={{ uri: src }}
+      alt="loading..."
+      style={{ width, height: 500, resizeMode: 'cover', borderRadius: 10, overflow: 'hidden' }}
+    />
+    {/* <LinearGradient */}
+    {/*   style={{ width: width * 0.4, height: 50 }} */}
+    {/*   start={{ x: 0, y: 0 }} */}
+    {/*   end={{ x: 0, y: 1 }} */}
+    {/*   className="absolute -bottom-2 -left-8 rounded-3xl" */}
+    {/*   colors={[ */}
+    {/*     "transparent", */}
+    {/*     "rgba(15, 23, 42, 0.3)", */}
+    {/*     "rgba(15, 23, 42, 0.7)", */}
+    {/*   ]} */}
+    {/* /> */}
   </View>
 }
-
-const ImageCard = ({ src, size = 'md' }: { src: string, size?: "lg" | "md" | "sm" }) => {
-  return (
-    <View>
-      <Carousel
-        renderItem={cor}
-        sliderWidth={30}
-        itemWidth={80}
-      />
-    </View>
-  )
-}
-
-export default ImageCard

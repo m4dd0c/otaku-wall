@@ -7,8 +7,7 @@ export const getImageById = async ({ image_id }: { image_id: string }) => {
 };
 
 export const getRandomImages = async () => {
-  const { data } = await instance.get("/random");
-  console.log(data);
+  const { data } = await instance.get("/random", { params: { rating: "safe" } });
   return data;
 };
 

@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 const LibraryTab = () => {
   return (
-    <View>
+    <View className="bg-red-500 border font-pop_extrabold">
       <Text>LibraryTab</Text>
     </View>
   );
